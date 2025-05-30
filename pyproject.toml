@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools==75.3.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "unilogging"
+version = "0.1.0"
+description = "A simple library for working with the context of logs."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Universe Interface", email = "uni@goduni.me" },
+]
+license = { text = "MIT" }
+keywords = ["logging", "context", "structured-logging", "python-logging"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dishka = ["dishka"]
+
+[project.urls]
+Homepage = "https://github.com/goduni/unilogging"
+Repository = "https://github.com/goduni/unilogging"
+Issues = "https://github.com/goduni/unilogging/issues"
