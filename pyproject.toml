@@ -2,15 +2,18 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.setuptools]
-include-package-data = true
+[tool.hatch.metadata]
+allow-direct-references = true
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.hatch.build]
+sources = ["src"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["unilogging"]
 
 [project]
 name = "unilogging"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple library for working with the context of logs."
 readme = "README.md"
 requires-python = ">=3.11"

@@ -3,8 +3,8 @@ from typing import runtime_checkable, Protocol
 
 from dishka import Provider, Scope, provide
 
-from unilog import Logger, LoggerImpl, LoggerContextImpl, LoggerContext
-from unilog.logger import T
+from unilogging import Logger, LoggerImpl, LoggerContextImpl, LoggerContext
+from unilogging.logger import T
 
 
 @runtime_checkable
