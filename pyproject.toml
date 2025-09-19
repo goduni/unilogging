@@ -5,18 +5,15 @@ build-backend = "hatchling.build"
 [tool.hatch.metadata]
 allow-direct-references = true
 
-[tool.hatch.build]
-sources = ["src"]
-
 [tool.hatch.build.targets.wheel]
 packages = ["unilogging"]
 
 [project]
 name = "unilogging"
-version = "0.1.1"
+version = "0.2.0"
 description = "A simple library for working with the context of logs."
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 authors = [
     { name = "Universe Interface", email = "uni@goduni.me" },
 ]
@@ -35,9 +32,52 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-dishka = ["dishka"]
+dishka = ["dishka>=1.6.0"]
+
+[dependency-groups]
+optionals = ["unilogging[dishka]"]
+
+lint = [
+    "mypy==1.17.1",
+    "ruff==0.12.12",
+]
+
+tests = [
+    "pytest==8.4.2",
+    "pytest-cov==7.0.0",
+    "python-json-logger==3.3.0",
+    "nox>=2025.5.1",
+    "nox-uv>=0.6.2",
+]
+
+dev = [
+    { include-group = "optionals" },
+    { include-group = "lint" },
+    { include-group = "tests" },
+]
 
 [project.urls]
 Homepage = "https://github.com/goduni/unilogging"
 Repository = "https://github.com/goduni/unilogging"
 Issues = "https://github.com/goduni/unilogging/issues"
+
+[tool.coverage.report]
+show_missing = true
+skip_empty = true
+exclude_also = [
+    "if __name__ == .__main__.:",
+    "self.logger",
+    "def __repr__",
+    "lambda: None",
+    "from .*",
+    "import .*",
+    '@(abc\.)?abstractmethod',
+    "raise NotImplementedError",
+    'raise AssertionError',
+    'logger\..*',
+    "pass",
+    '\.\.\.',
+]
+
+[tool.coverage.run]
+omit = ["*__dishka_factory_*"]
