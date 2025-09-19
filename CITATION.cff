@@ -1,0 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: unilogging
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Universe Interface
+    email: uni@goduni.me
+repository-code: 'https://github.com/goduni/unilogging'
+abstract: >
+  A simple python library for working with the context of
+  logs.
+repository-artifact: 'https://pypistats.org/packages/unilogging'
+keywords:
+  - python
+  - logging
+  - context
+  - structured-logging
+  - python-logging
+license: MIT
