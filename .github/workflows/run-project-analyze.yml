@@ -24,16 +24,17 @@ jobs:
         with:
           version: "latest"
 
-      - uses: extractions/setup-just@v3
+      - name: Setup just
+        uses: extractions/setup-just@v3
 
       - name: Sync dependencies
         run: uv sync --group dev
 
       - name: Run Ruff
-        run: just lint
+        run: uv run ruff check
 
       - name: Run MyPy
-        run: just static-analysis
+        run: uv run mypy
 
       - name: Run Tests
-        run: just test
+        run: uv run pytest --cov
