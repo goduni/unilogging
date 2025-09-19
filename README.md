@@ -3,6 +3,7 @@
 A simple library for working with the context of logs.
 
 [![codecov](https://codecov.io/gh/goduni/unilogging/branch/master/graph/badge.svg)](https://codecov.io/gh/goduni/unilogging)
+[![PyPI version](https://img.shields.io/pypi/v/unilogging.svg)](https://pypi.org/project/unilogging)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/unilogging)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/unilogging)
 ![GitHub License](https://img.shields.io/github/license/goduni/unilogging)
