@@ -24,6 +24,8 @@ jobs:
         with:
           version: "latest"
 
+      - uses: extractions/setup-just@v3
+
       - name: Sync dependencies
         run: uv sync --group dev
 
