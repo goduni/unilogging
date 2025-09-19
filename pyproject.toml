@@ -10,7 +10,7 @@ packages = ["unilogging"]
 
 [project]
 name = "unilogging"
-version = "0.2.0"
+version = "0.2.1"
 description = "A simple library for working with the context of logs."
 readme = "README.md"
 requires-python = ">=3.12"
