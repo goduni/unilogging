@@ -10,7 +10,7 @@ packages = ["unilogging"]
 
 [project]
 name = "unilogging"
-version = "0.2.1"
+version = "0.2.2"
 description = "A simple library for working with the context of logs."
 readme = "README.md"
 requires-python = ">=3.12"
@@ -21,7 +21,6 @@ license = { text = "MIT" }
 keywords = ["logging", "context", "structured-logging", "python-logging"]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: 3.14",

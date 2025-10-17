@@ -39,7 +39,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with DEBUG level."""
@@ -50,7 +50,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with INFO level."""
@@ -61,7 +61,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with WARNING level."""
@@ -72,7 +72,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with WARNING level."""
@@ -83,7 +83,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with ERROR level."""
@@ -94,7 +94,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | bool | None = True,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with ERROR level and exception info."""
@@ -105,7 +105,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with FATAL level."""
@@ -116,7 +116,7 @@ class Logger[T](ABC):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with CRITICAL level."""
@@ -127,7 +127,7 @@ class Logger[T](ABC):
             self, level: int, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 2,
             **state,
     ):
         """Log message."""
@@ -179,7 +179,7 @@ class LoggerImpl[T](Logger):
             self, level: int, msg: str,
             exception: BaseException | bool | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 2,
             **state,
     ):
         """Log message."""
@@ -195,7 +195,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with DEBUG level."""
@@ -209,7 +209,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with INFO level."""
@@ -223,7 +223,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with WARNING level."""
@@ -237,7 +237,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with WARNING level."""
@@ -251,7 +251,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with ERROR level."""
@@ -265,7 +265,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | bool | None = True,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with ERROR level and exception info."""
@@ -279,7 +279,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with FATAL level."""
@@ -293,7 +293,7 @@ class LoggerImpl[T](Logger):
             self, msg: str,
             exception: BaseException | None = None,
             /,
-            stack_info: bool = False, stacklevel: int = 1,
+            stack_info: bool = False, stacklevel: int = 3,
             **state,
     ):
         """Log message with CRITICAL level."""
